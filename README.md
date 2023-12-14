@@ -2,7 +2,9 @@
 本项目是以 Amphitheatre 为基础开发的面向 Web3 的开源通用 Playground 产品（前端 Repo），旨在帮助开发者更好的学习 Web3 开发，由
 Amphitheatre 和 OpenBuild 共同发起。
 
-# 2. 参与开源的好处？
+我们欢迎各位开发者参与到本项目的贡献，代码/测试/文档编写均可 👏
+
+# 2. 为什么要参与
 我们相信开发者通过参与开源贡献不仅可以提高技术能力，也可以在社区建立更好的个人影响力，因此我们鼓励开发者参与到开源项目的贡献中，**不用担心自己的能
 力如何，可以从最简单的做起，及时不是代码，最最重要的是走出第一步**。
 推荐大家看看这篇文章：[为什么要参与到开源社区中？](https://shardingsphere.apache.org/blog/cn/material/open_source_community/)
@@ -15,7 +17,7 @@ Amphitheatre 和 OpenBuild 共同发起。
 ## 2.1 悬赏激励
 我们会将一些开发任务作为 [issues](https://github.com/amphitheatre-app/playground/issues) 发布出来，打上 Task 标签 🏷️，感兴趣的小伙伴可以在对应的 issue
 里评估开发时间（小时为单位），我们将从里面选出最合适的开发者，并将任务 Assign 给他，**任务完成并通过 PR 后，我们将按照 $8/小时 给于奖励💰**。
-> 奖励会通过 USDT 发放，完成后及时发放
+> 奖励会在 PR 完成后 3 日之内发放，通过 USDT 发放
 
 ## 2.2 OpenBuild SBT 激励
 
@@ -31,7 +33,5 @@ Amphitheatre 和 OpenBuild 共同发起。
 
 # 3. 如何参与贡献
 贡献提交流程遵循 Github PR 标准流程，可参考 [如何在 GitHub 提交第一个 pull request](https://www.freecodecamp.org/chinese/news/how-to-make-your-first-pull-request-on-github)。
-
-欢迎大家参与到本项目的贡献，代码/测试/文档编写均可 👏
 
 同时如果你有任何建议，也欢迎通过 issue 提供我们，请打上 Proposal 标签。
