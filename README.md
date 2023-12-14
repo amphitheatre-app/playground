@@ -16,14 +16,17 @@ Amphitheatre 和 OpenBuild 共同发起。
 
 ## 2.1 悬赏激励
 我们会将一些开发任务作为 [Task Issues](https://github.com/amphitheatre-app/playground/issues?q=is%3Aopen+is%3Aissue+label%3ATask) 发布出来，打上 Task 标签 🏷️，感兴趣的小伙伴可以在对应的 issue
-里评估开发时间（小时为单位），我们将从里面选出最合适的开发者，并将任务 Assign 给他，**任务完成并通过 PR 后，我们将按照 $8/小时 给于奖励💰**。
-> 奖励会在 PR 完成后 3 日之内发放，通过 USDT 发放
-
+里评估开发时间（小时为单位），我们将从里面选出最合适的开发者，并将任务 Assign 给他，**任务完成并通过 PR 后，我们将按照 $5/小时 给于奖励💰**。
 每个 Task 拥有 3 个状态：
 
- - recruiting: 表示任务尚未开始，开发者进行评估中
- - building: 表示任务已经在开发中
- - completed: 表示任务已经完成
+- recruiting: 表示任务尚未开始，开发者进行评估中
+- building: 表示任务已经在开发中
+- completed: 表示任务已经完成
+
+> 奖励会在 PR 完成后 3 日之内发放，通过 USDT 发放。
+> 
+> 奖励金额后续可能会根据情况变更，但不影响进行中或已完成的任务。
+
 
 ## 2.2 OpenBuild SBT 激励
 
