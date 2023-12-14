@@ -16,7 +16,7 @@ Amphitheatre 和 OpenBuild 共同发起。
 
 ## 2.1 悬赏激励
 我们会将一些开发任务作为 [Task Issues](https://github.com/amphitheatre-app/playground/issues?q=is%3Aopen+is%3Aissue+label%3ATask) 发布出来，打上 Task 标签 🏷️，感兴趣的小伙伴可以在对应的 issue
-里评估开发时间（小时为单位），我们将从里面选出最合适的开发者，并将任务 Assign 给他，**任务完成并通过 PR 后，我们将按照 $5/小时 给于奖励💰**。
+里评估开发时间（小时为单位），我们将从里面选出最合适的开发者，并将任务 Assign 给他，**任务完成并通过 PR 后，我们将按照 $5/时 给于奖励💰**。
 每个 Task 拥有 3 个状态：
 
 - recruiting: 表示任务尚未开始，开发者进行评估中
