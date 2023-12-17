@@ -24,7 +24,7 @@ Amphitheatre 和 OpenBuild 共同发起。
 - building: 表示任务已经在开发中
 - completed: 表示任务已经完成
 
-> 奖励会在 PR 完成后 3 日之内发放，通过 USDT 发放。
+> 奖励会在 PR 完成后 3 日之内发放，通过 USDT 发放。 发放记录：[贡献激励公示](https://github.com/amphitheatre-app/playground/issues/4)
 > 
 > 奖励金额后续可能会根据情况变更，但不影响进行中或已完成的任务。
 
