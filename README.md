@@ -26,6 +26,8 @@ backend](https://github.com/amphitheatre-app/playground-api). Docker containers
 are used to provide the various compilers and tools as well as to help isolate
 them.
 
+![Playground Architecture](./docs/images/architecture.jpg)
+
 ## Usage
 
 The Playground may be included on your site in one of two ways:
