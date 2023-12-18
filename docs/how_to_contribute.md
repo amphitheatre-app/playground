@@ -2,6 +2,10 @@
 本项目是以 Amphitheatre 为基础开发的面向 Web3 的开源通用 Playground 产品（前端 Repo），旨在帮助开发者更好的学习 Web3 开发，由
 Amphitheatre 和 OpenBuild 共同发起。
 
+> 如果你对本 Playground 的其它任务感兴趣，请访问：
+> - API: https://github.com/amphitheatre-app/playground-api
+> - Buildpacks: https://github.com/amp-buildpacks
+
 我们欢迎各位开发者参与到本项目的贡献，代码/测试/文档编写均可 👏
 
 # 2. 为什么要参与
