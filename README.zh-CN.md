@@ -1,4 +1,6 @@
-# Playground
+<div align="center">
+
+# Amphitheatre Playground
 
 [![License](https://img.shields.io/github/license/amphitheatre-app/playground)](https://github.com/amphitheatre-app/playground/blob/master/LICENSE)
 [![GitHub
@@ -6,9 +8,19 @@ contributors](https://img.shields.io/github/contributors/amphitheatre-app/playgr
 [![GitHub
 issues](https://img.shields.io/github/issues/amphitheatre-app/playground)](https://github.com/amphitheatre-app/playground/issues)
 
+[项目介绍](#它能做什么) •
+[架构](#架构) •
+[使用方法](#使用方法) •
+[开发](#本地开发) •
+[贡献](#贡献) •
+[English](README.md)
+
+</div>
+
 ## 它能做什么？
 
-嵌入在网页中的代码运行器，支持多种编程语言。你可以查看演示并了解更多关于功能的信息[这里](https://play.amphitheatre.app)。 
+嵌入在网页中的代码运行器，支持多种编程语言。你可以查看演示并了解更多关于功能的信
+息[这里](https://play.amphitheatre.app)。
 
 它具有以下功能：
 
@@ -20,7 +32,9 @@ issues](https://img.shields.io/github/issues/amphitheatre-app/playground)](https
 
 ## 架构
 
-一个 `React` 前端与一个 [Axum 后端](https://github.com/amphitheatre-app/playground-api)进行通信。使用 `Docker` 容器提供各种编译器和工具，并帮助隔离它们。
+一个 `React` 前端与一个 [Axum 后
+端](https://github.com/amphitheatre-app/playground-api)进行通信。使用 `Docker`
+容器提供各种编译器和工具，并帮助隔离它们。
 
 ![Playground Architecture](./docs/images/architecture.jpg)
 
@@ -44,7 +58,8 @@ export default function App() {
 }
 ```
 
-> 这个组件是 `iframe` 的包装器，它为你处理编码参数。虽然它将大多数属性传递给 `iframe`，但它有一些额外的属性：
+> 这个组件是 `iframe` 的包装器，它为你处理编码参数。虽然它将大多数属性传递给
+> `iframe`，但它有一些额外的属性：
 
 
 | 标题 | 描述  | 默认值 |
@@ -89,19 +104,24 @@ export default function App() {
 - `npm run serve` 从 `dist/` 目录中服务并打开浏览器页面。
 
 
-在开发过程中，为了实现快速的编辑刷新循环，请运行 `npm run serve-watch`。这将启动一个 `HTTP` 服务器，并在 `TypeScript`、`HTML` 和 `CSS` 文件发生变化时自动重新编译它们。
+在开发过程中，为了实现快速的编辑刷新循环，请运行 `npm run serve-watch`。这将启动
+一个 `HTTP` 服务器，并在 `TypeScript`、`HTML` 和 `CSS` 文件发生变化时自动重新编
+译它们。
 
 ## 使用 `Docker-compose` 进行本地开发
 
 - 确保 [docker](https://docs.docker.com/get-docker/) 已安装。
 - Clone 或者 fork 此仓库。
-- 启动服务器 `docker-compose up`，如果希望在后台运行，将 `-d` 添加到 `docker-compose up` 命令后面。
+- 启动服务器 `docker-compose up`，如果希望在后台运行，将 `-d` 添加到
+  `docker-compose up` 命令后面。
 
 > 第一次启动会花费一些时间下载依赖项。这些依赖项只下载一次，然后进行缓存。
 
 ## 使用 `Amphitheatre` 进行开发
 
-与 [Amphitheatre 的其他示例](https://docs.amphitheatre.app/examples/)一样，在[安装服务器和CLI软件](https://docs.amphitheatre.app/installation/)以及[配置证书和首选项](https://docs.amphitheatre.app/getting-started/initialize/)后，执行以下命令
+与 [Amphitheatre 的其他示例](https://docs.amphitheatre.app/examples/)一样，在[安
+装服务器和CLI软件](https://docs.amphitheatre.app/installation/)以及[配置证书和首
+选项](https://docs.amphitheatre.app/getting-started/initialize/)后，执行以下命令
 
 ```bash
 amp run
@@ -109,13 +129,21 @@ amp run
 
 ## 贡献
 
-如果感觉有任何不对劲，或者觉得某些功能缺失，请查看[贡献页面](https://docs.amphitheatre.app/contributing/)。在那里，您将找到分享反馈、在本地构建工具以及向项目提交拉取请求的说明。
+如果感觉有任何不对劲，或者觉得某些功能缺失，请查看[贡献页
+面](https://docs.amphitheatre.app/contributing/)。在那里，您将找到分享反馈、在本
+地构建工具以及向项目提交拉取请求的说明。
 
-**此项目基于 Amphitheatre 开发的 Web3 开源通用游乐场产品，旨在帮助开发者更好地学习Web3开发，由 [Amphitheatre](https://amphitheatre.app/) 和 [OpenBuild](https://openbuild.xyz) 共同赞助。**
+**此项目基于 Amphitheatre 开发的 Web3 开源通用游乐场产品，旨在帮助开发者更好地学
+习Web3开发，由 [Amphitheatre](https://amphitheatre.app/) 和
+[OpenBuild](https://openbuild.xyz) 共同赞助。**
 
-**我们将一些开发任务作为任务主题并标记为“任务”，感兴趣的合作伙伴可以在相应的主题中评估开发时间，我们将从他们中选择最合适的开发者并将任务分配给他，任务完成后并通过PR，我们将给予奖励。**
+**我们将一些开发任务作为任务主题并标记为“任务”，感兴趣的合作伙伴可以在相应的主题
+中评估开发时间，我们将从他们中选择最合适的开发者并将任务分配给他，任务完成后并通
+过PR，我们将给予奖励。**
 
-更多信息，请参考[如何贡献](https://github.com/amphitheatre-app/playground/blob/master/docs/how_to_contribute.md)和[贡献奖励公告](https://github.com/amphitheatre-app/playground/issues/4)。
+更多信息，请参考[如何贡
+献](https://github.com/amphitheatre-app/playground/blob/master/docs/how_to_contribute.zh-CN.md)
+和[贡献奖励公告](https://github.com/amphitheatre-app/playground/issues/4)。
 
 ## License
 

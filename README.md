@@ -1,10 +1,21 @@
-# Playground
+<div align="center">
+
+# Amphitheatre Playground
 
 [![License](https://img.shields.io/github/license/amphitheatre-app/playground)](https://github.com/amphitheatre-app/playground/blob/master/LICENSE)
 [![GitHub
 contributors](https://img.shields.io/github/contributors/amphitheatre-app/playground)](https://github.com/amphitheatre-app/playground/graphs/contributors)
 [![GitHub
 issues](https://img.shields.io/github/issues/amphitheatre-app/playground)](https://github.com/amphitheatre-app/playground/issues)
+
+[What's it do?](#whats-it-do) •
+[Architecture](#architecture) •
+[Usage](#usage) •
+[Development](#local-development) •
+[Contributing](#contributing) •
+[简体中文](README.zh-CN.md)
+
+</div>
 
 ## What's it do?
 
