@@ -1,17 +1,14 @@
 import "./App.css";
 
 import EditorComponent from "./components/Editor";
-import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <EditorComponent />
-      </div>
-    </>
+    <div>
+      <EditorComponent width="100%" height="100%" defaultLanguage="en" />
+    </div>
   );
 }
 
