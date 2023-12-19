@@ -1,51 +1,60 @@
-# 1. 概述
-本项目是以 Amphitheatre 为基础开发的面向 Web3 的开源通用 Playground 产品（前端 Repo），旨在帮助开发者更好的学习 Web3 开发，由
-Amphitheatre 和 OpenBuild 共同发起。
+# 1. Overview
 
-> 如果你对本 Playground 的其它任务感兴趣，请访问：
+This project is an open-source, general Playground product (front-end repository) for Web3, developed based on Amphitheatre, aiming to help developers better learn Web3 development. It is jointly initiated by Amphitheatre and OpenBuild.
+
+> If you are interested in other tasks of this Playground, please visit:
 > - API: https://github.com/amphitheatre-app/playground-api
 > - Buildpacks: https://github.com/amp-buildpacks
 
-我们欢迎各位开发者参与到本项目的贡献，代码/测试/文档编写均可 👏
+We welcome developers to contribute to this project, including code contributions, testing, and documentation writing. 👏
 
-# 2. 为什么要参与
-我们相信开发者通过参与开源贡献不仅可以提高技术能力，也可以在社区建立更好的个人影响力，因此我们鼓励开发者参与到开源项目的贡献中，**不用担心自己的能
-力如何，可以从最简单的做起，及时不是代码，最最重要的是走出第一步**。
-推荐大家看看这篇文章：[为什么要参与到开源社区中？](https://shardingsphere.apache.org/blog/cn/material/open_source_community/)
+# 2. Why Participate
 
-当然除了上面提到的开源"礼物"，我们也会提供不同类型的物质激励给到大家，真切的感谢大家的贡献！
+We believe that developers can not only improve their technical skills but also build better personal influence in the community by participating in open-source contributions. 
 
-**但请注意，我们不希望大家只是抱着能赚钱的态度来**，
-而是觉得参与开源和社区对自己的长期成长是有益的，更是认可这个项目的价值。
+Therefore, we encourage developers to contribute to open-source projects. 
 
-## 2.1 悬赏激励
-我们会将一些开发任务作为 [Task Issues](https://github.com/amphitheatre-app/playground/issues?q=is%3Aopen+is%3Aissue+label%3ATask) 发布出来，打上 Task 标签 🏷️，感兴趣的小伙伴可以在对应的 issue
-里评估开发时间（小时为单位），我们将从里面选出最合适的开发者，并将任务 Assign 给他，**任务完成并通过 PR 后，我们将按照 $5/时 给于奖励💰**。
+**Don’t worry about your ability; you can start with the simplest tasks. The most important thing is to take the first step.**
 
-每个 Task 拥有 3 个状态：
+We recommend reading this article: [Why Participate in the Open Source Community?](https://shardingsphere.apache.org/blog/cn/material/open_source_community/)
 
-- recruiting: 表示任务尚未开始，开发者进行评估中
-- building: 表示任务已经在开发中
-- completed: 表示任务已经完成
+Of course, in addition to the mentioned open-source “gifts,” we will also provide various types of material incentives for everyone, sincerely thanking everyone for their contributions!
 
-> 奖励会在 PR 完成后 3 日之内发放，通过 USDT 发放。 发放记录：[贡献激励公示](https://github.com/amphitheatre-app/playground/issues/4)
->
-> 奖励金额后续可能会根据情况变更，但不影响进行中或已完成的任务。
+**But please note, we don’t want everyone to just participate for the sake of making money**, but rather, we believe that participating in open source and the community is beneficial for long-term growth and recognizes the value of this project.
 
+## 2.1 Bounty Incentives
 
-## 2.2 OpenBuild SBT 激励
+We will post some development tasks as [Task Issues](https://github.com/amphitheatre-app/playground/issues?q=is%3Aopen+is%3Aissue+label%3ATask), labeled with a Task tag 🏷️. 
 
-对于积极参与贡献（>=40小时）的开发者，我们将发放 OpenBuild SBT，持有 OpenBuild 后续可以享受以下权益：
+Interested parties can evaluate the development time (in hours) in the corresponding issue, and we will select the most suitable developers from them and assign the task to them. 
 
-- OpenBuild 定制周边
-- OpenBuild 平台 Bounty / 招聘绿色通道
-- 助力打造个人技术影响力
-- 开发者成长礼包（高价值教程、技术书籍、各种开发平台的 Credits / License等）
-- 潜在的合作伙伴空投
-- 其它
+**After the task is completed and the PR is passed, we will reward $5 per hour.💰**
+
+Each Task has 3 states:
+
+- recruiting: indicates that the task has not started, and developers are evaluating it
+- building: indicates that the task is under development
+- completed: indicates that the task has been completed
+
+> Rewards will be distributed within 3 days after the PR is completed, through USDT. Distribution records: [Contribution Incentives Disclosure](https://github.com/amphitheatre-app/playground/issues/4)
+> 
+> The reward amount may change later depending on the situation, but it will not affect ongoing or completed tasks.
 
 
-# 3. 如何参与贡献
-贡献提交流程遵循 Github PR 标准流程，可参考 [如何在 GitHub 提交第一个 pull request](https://www.freecodecamp.org/chinese/news/how-to-make-your-first-pull-request-on-github)。
+## 2.2 OpenBuild SBT Incentives
 
-同时如果你有任何建议，也欢迎通过 issue 提供我们，请打上 Proposal 标签。
+For developers who actively contribute (>=40 hours), we will issue OpenBuild SBT. By holding OpenBuild, you can enjoy the following benefits:
+
+- OpenBuild custom peripherals
+- OpenBuild platform Bounty / recruitment green channel
+- Help build personal technical influence
+- Developer growth package (high-value tutorials, technical books, various development platform credits / licenses, etc.)
+- Potential partner airdrops
+- Other benefits
+
+
+# 3. How to Participate
+
+Contribution submission follows the standard GitHub PR process, and you can refer to [How to Submit Your First Pull Request on GitHub](https://www.freecodecamp.org/chinese/news/how-to-make-your-first-pull-request-on-github).
+
+Also, if you have any suggestions, you are welcome to provide them through issues. Please use the Proposal label.
