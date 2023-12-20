@@ -10,6 +10,8 @@ services:
       AMP_SERVER: http://localhost:8170
 
   playground:
-    image: ghcr.io/amphitheatre-app/playground:latest
+    image: ghcr.io/amphitheatre-app/playground:v0.0.1
     ports:
-    - 5173:5173
+    - 3000:3000
+    environment:
+      PORT: 3000
