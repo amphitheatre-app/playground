@@ -99,12 +99,12 @@ export default function App() {
 
 要在本地运行，请执行以下操作：
 
-- `npm install` 安装依赖包
-- `npm run build` 编译应用程序并将其放置在 `dist/` 目录中
-- `npm run serve` 从 `dist/` 目录中服务并打开浏览器页面。
+- `yarn` 安装依赖包
+- `yarn build` 编译应用程序并将其放置在 `build/` 目录中
+- `yarn start` 从 `build/` 目录中服务并打开浏览器页面。
 
 
-在开发过程中，为了实现快速的编辑刷新循环，请运行 `npm run serve-watch`。这将启动
+在开发过程中，为了实现快速的编辑刷新循环，请运行 `yarn dev`。这将启动
 一个 `HTTP` 服务器，并在 `TypeScript`、`HTML` 和 `CSS` 文件发生变化时自动重新编
 译它们。
 
