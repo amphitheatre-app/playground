@@ -1,4 +1,4 @@
-function Layout({ children }) {
+function Layout({ children }: Readonly<{ children: any }>) {
   return (
     <div>
       <header></header>

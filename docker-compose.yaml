@@ -12,4 +12,6 @@ services:
   playground:
     image: ghcr.io/amphitheatre-app/playground:latest
     ports:
-    - 5173:5173
+    - 3000:3000
+    environment:
+      PORT: 3000

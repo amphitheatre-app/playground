@@ -1,12 +1,13 @@
 {
   "name": "playground",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf build .next"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.6.0",
