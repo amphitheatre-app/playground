@@ -93,12 +93,12 @@ The Playground accepts the following props/parameters.
 
 To run the playground locally, run:
 
-- `npm install` to install dependencies
-- `npm run build` to compile the app and place it in the `dist/` directory
-- `npm run serve` to serve from the `dist/` directory and open a page on your
+- `yarn` to install dependencies
+- `yarn build` to compile the app and place it in the `build/` directory
+- `yarn start` to serve from the `build/` directory and open a page on your
   browser.
 
-For a fast edit-refresh cycle when developing run `npm run serve-watch`. This will
+For a fast edit-refresh cycle when developing run `yarn dev`. This will
 start an http server and automatically re-compile the TypeScript, HTML and CSS
 files whenever they change.
 
