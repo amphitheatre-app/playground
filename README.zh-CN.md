@@ -44,40 +44,33 @@ issues](https://img.shields.io/github/issues/amphitheatre-app/playground)](https
 
 ### 作为 `React` 组件
 
-如果你正在使用 `React`，可用以下命令安装依赖包：
+如果你使用的是 React，那么你可以直接在你的项目中添加
+[playground-react](https://github.com/amphitheatre-app/playground-react) 组件。
+在你的项目中，就像下面这样简单：
 
 ```shell
-npm install --save @amphitheatre/playground
+npm install --save @amphitheatre/playground-react
 ```
 
 ```javascript
-import Playground from '@amphitheatre/playground'
+import Playground from '@amphitheatre/playground-react'
 
 export default function App() {
   return <Playground style={{ width: 800, height: 500 }} />
 }
 ```
 
-> 这个组件是 `iframe` 的包装器，它为你处理编码参数。虽然它将大多数属性传递给
-> `iframe`，但它有一些额外的属性：
-
-
-| 标题 | 描述  | 默认值 |
-| --------------- | ------------------------------------------------------------ | --------------------- |
-| **`style`**     | 包含 `iframe` 的 `div` 的样式（`iframe`具有 100% 的宽度和高度）。 | `undefined`           |
-| **`className`** | 包含 `iframe` 的 `div` 的类名         | `undefined`           |
-| **`baseURL`**   | 可选项，指定一个自定义的 `URL` 来加载播放器。这个 `URL` 不应包含哈希。 | play.amphitheatre.app |
-
 ### 作为 `iframe`
 
-如果你没有使用 `React`，可以在 `iframe` 中包含沙盒。
+如果不使用 React，请先私下部署项目和后端服务器，然后将 Playground 包含在一个
+`iframe` 中。
 
 ```html
 <iframe
   width="880"
   height="425"
   frameborder="0"
-  src="//play.amphitheatre.app/?gist=6b8b99c93be318f254606a92955294ec"
+  src="//playground.your-domain.com/?gist=6b8b99c93be318f254606a92955294ec"
 ></iframe>
 ```
 

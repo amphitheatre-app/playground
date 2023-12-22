@@ -45,40 +45,33 @@ The Playground may be included on your site in one of two ways:
 
 ### As a React Component
 
-If you're using React:
+If you are using React, then you can add the
+[playground-react](https://github.com/amphitheatre-app/playground-react)
+component directly in your project, as simple as the following:
 
 ```shell
-npm install --save @amphitheatre/playground
+npm install --save @amphitheatre/playground-react
 ```
 
 ```javascript
-import Playground from '@amphitheatre/playground'
+import Playground from '@amphitheatre/playground-react'
 
 export default function App() {
   return <Playground style={{ width: 800, height: 500 }} />
 }
 ```
 
-
-
-This component is a wrapper around the `iframe` that handles encoding parameters for you. While it passes most props along to the `iframe`, it has a few extra props:
-
-| Title           | Description                                                  | Default               |
-| --------------- | ------------------------------------------------------------ | --------------------- |
-| **`style`**     | The style of the `div` which wraps the `iframe` (the iframe has `100%` width and height). | `undefined`           |
-| **`className`** | The className of the `div` which wraps the `iframe`          | `undefined`           |
-| **`baseURL`**   | Optionally, specify a custom url to load the player from. This url should not include a hash. | play.amphitheatre.app |
-
 ### As an iframe
 
-If you're not using React, include the Playground in an `iframe`.
+If you're not using React, please deploy the project and backend server
+privately first, then include the Playground in an `iframe`.
 
 ```html
 <iframe
   width="880"
   height="425"
   frameborder="0"
-  src="//play.amphitheatre.app/?gist=6b8b99c93be318f254606a92955294ec"
+  src="//playground.your-domain.com/?gist=6b8b99c93be318f254606a92955294ec"
 ></iframe>
 ```
 
