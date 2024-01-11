@@ -150,7 +150,7 @@ Announcement](https://github.com/amphitheatre-app/playground/issues/4).
 
 ## Contributors
 
-<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors,zouyuxuan -start -->
 <table>
 <tr>
     <td align="center">
@@ -204,7 +204,7 @@ Announcement](https://github.com/amphitheatre-app/playground/issues/4).
         </a>
     </td></tr>
 </table>
-<!-- readme: collaborators,contributors -end -->
+<!-- readme: collaborators,contributors,zouyuxuan -end -->
 
 ## License
 

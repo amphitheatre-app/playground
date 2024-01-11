@@ -128,7 +128,7 @@ amp run
 
 ## 贡献者
 
-<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors,zouyuxuan -start -->
 <table>
 <tr>
     <td align="center">
@@ -182,7 +182,7 @@ amp run
         </a>
     </td></tr>
 </table>
-<!-- readme: collaborators,contributors -end -->
+<!-- readme: collaborators,contributors,zouyuxuan -end -->
 
 ## License
 
