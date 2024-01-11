@@ -148,6 +148,11 @@ Contribute](https://github.com/amphitheatre-app/playground/blob/master/docs/how_
 and the [Contribution Reward
 Announcement](https://github.com/amphitheatre-app/playground/issues/4).
 
+## Contributors
+
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
+
 ## License
 
 Copyright (c) The Amphitheatre Authors. All rights reserved.
