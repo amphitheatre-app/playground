@@ -126,6 +126,11 @@ amp run
 
 更多信息，请参考[如何贡献](https://github.com/amphitheatre-app/playground/blob/master/docs/how_to_contribute.zh-CN.md)和[贡献奖励公告](https://github.com/amphitheatre-app/playground/issues/4)。
 
+## 贡献者
+
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
+
 ## License
 
 Copyright (c) The Amphitheatre Authors. All rights reserved.
