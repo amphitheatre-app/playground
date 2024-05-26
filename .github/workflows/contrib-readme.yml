@@ -14,14 +14,14 @@ jobs:
     name: A job to automate contrib in readme
     steps:
       - name: Update README.md
-        uses: akhilmhdh/contributors-readme-action@v2.3.6
+        uses: akhilmhdh/contributors-readme-action@v2.3.10
         with:
           readme_path: "README.md"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update README.zh-CN.md
-        uses: akhilmhdh/contributors-readme-action@v2.3.6
+        uses: akhilmhdh/contributors-readme-action@v2.3.10
         with:
           readme_path: "README.zh-CN.md"
         env:
