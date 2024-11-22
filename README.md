@@ -13,6 +13,7 @@ issues](https://img.shields.io/github/issues/amphitheatre-app/playground)](https
 [Usage](#usage) •
 [Development](#local-development) •
 [Contributing](#contributing) •
+[License](#license) •
 [简体中文](README.zh-CN.md)
 
 </div>
