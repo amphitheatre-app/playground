@@ -1,4 +1,5 @@
 import React from "react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 interface IResultWindowProps {
   result: string;
@@ -18,9 +19,10 @@ const ResultWindow: React.FC<IResultWindowProps> = ({
       <pre className="whitespace-pre-wrap">{result}</pre>
       <button
         onClick={onClear}
-        className="absolute top-2 right-2 bg-red-500 text-white font-bold py-1 px-3 rounded shadow hover:bg-red-600"
+        className="absolute top-4 right-4 bg-zinc-400 text-gray-700 font-bold p-2 rounded-full shadow hover:bg-zinc-600"
+        title="Clear Output"
       >
-        Clear
+        <XMarkIcon className="h-5 w-5" />
       </button>
     </div>
   );

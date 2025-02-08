@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import EditorComponent from "@/components/Editor";
 import ResultWindow from "@/components/ResultWindow";
 import { languageExamples, LanguageType } from "@/constants/languageExamples";
-import prettier from "prettier";
+import { DocumentTextIcon, PlayIcon } from "@heroicons/react/24/outline";
 
 const languageOptions = [
   { value: "javascript", label: "JavaScript" },
@@ -48,7 +48,7 @@ const EditorPage: React.FC = () => {
 
     try {
       // Handle other languages with Prettier in frontend
-      // const prettier = await import("prettier/standalone");
+      const prettier = await import("prettier/standalone");
       const plugins = [];
 
       switch (language) {
@@ -85,7 +85,7 @@ const EditorPage: React.FC = () => {
           return;
       }
 
-      const formattedCode = await prettier.format(code, {
+      const formattedCode = await prettier.default.format(code, {
         parser: language === "typescript" ? "typescript" : "babel",
         plugins,
         printWidth: 80,
@@ -172,15 +172,18 @@ const EditorPage: React.FC = () => {
 
           <button
             onClick={handleRun}
-            className="absolute top-2 right-4 bg-blue-500 text-white font-bold py-2 px-4 rounded shadow hover:bg-blue-600 z-10"
+            className="absolute top-4 right-5 bg-blue-600 text-gray-900 font-bold py-2 px-3 rounded shadow hover:bg-blue-700 z-10 flex gap-2 items-center"
+            title="Run Code"
           >
+            <PlayIcon className="h-5 w-5" />
             Run
           </button>
           <button
             onClick={handleFormat}
-            className="absolute top-2 right-20 bg-green-500 text-white font-bold py-2 px-2 rounded shadow hover:bg-green-600 z-10"
+            className="absolute top-4 right-32 bg-zinc-400 text-gray-700 font-bold p-3 rounded-full shadow hover:bg-zinc-600 z-10"
+            title="Format Code"
           >
-            Format
+            <DocumentTextIcon className="h-5 w-5" />
           </button>
         </div>
         <ResultWindow result={result} onClear={handleClear} width="w-1/2" />

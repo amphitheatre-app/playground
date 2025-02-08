@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@heroicons/react": "^2.2.0",
     "@monaco-editor/react": "^4.6.0",
     "@mui/material": "^6.4.3",
     "lua-fmt": "^2.6.0",
