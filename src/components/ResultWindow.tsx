@@ -3,19 +3,17 @@ import React from "react";
 interface IResultWindowProps {
   result: string;
   onClear: () => void;
-  height: string;
   width: string;
 }
 
 const ResultWindow: React.FC<IResultWindowProps> = ({
   result,
   onClear,
-  height,
   width,
 }) => {
   return (
     <div
-      className={`border border-gray-300 rounded p-4 ${height} ${width} overflow-y-auto relative`}
+      className={`bg-[#FFFFFF] p-4 h-full ${width} overflow-y-auto relative`}
     >
       <pre className="whitespace-pre-wrap">{result}</pre>
       <button

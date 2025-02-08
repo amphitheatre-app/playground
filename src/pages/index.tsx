@@ -103,93 +103,87 @@ const EditorPage: React.FC = () => {
   };
   return (
     <Layout>
-      <div className="flex flex-col gap-4">
-        <div className="flex items-center flex-row gap-8 w-1/2">
-          <h1 className="text-2xl font-bold"> 编辑器</h1>
-          <div className="flex gap-4">
-            <div>
-              <label htmlFor="language-select" className="mr-2">
-                选择语言:
-              </label>
-              <select
-                id="language-select"
-                value={language}
-                onChange={(e) => {
-                  setLanguage(e.target.value);
-                  setSelectedExample("");
-                  setCode("");
-                }}
-                className="border border-gray-300 rounded p-1"
-              >
-                {languageOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label htmlFor="example-select" className="mr-2">
-                示例:
-              </label>
-              <select
-                id="example-select"
-                value={selectedExample}
-                onChange={(e) => {
-                  setSelectedExample(e.target.value);
-                  if (e.target.value) {
-                    setCode(
-                      languageExamples[language as LanguageType][
-                        e.target
-                          .value as keyof (typeof languageExamples)[LanguageType]
-                      ]
-                    );
-                  }
-                }}
-                className="border border-gray-300 rounded p-1"
-              >
-                <option value="">选择示例</option>
-                {Object.keys(
-                  languageExamples[language as LanguageType] || {}
-                ).map((example) => (
-                  <option key={example} value={example}>
-                    {example}
-                  </option>
-                ))}
-              </select>
-            </div>
+      <div className="flex items-center flex-row gap-8 w-1/2">
+        <h1 className="text-2xl font-bold p-5">编辑器</h1>
+        <div className="flex gap-4">
+          <div>
+            <label htmlFor="language-select" className="mr-2">
+              选择语言:
+            </label>
+            <select
+              id="language-select"
+              value={language}
+              onChange={(e) => {
+                setLanguage(e.target.value);
+                setSelectedExample("");
+                setCode("");
+              }}
+              className="border border-gray-300 rounded p-1"
+            >
+              {languageOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label htmlFor="example-select" className="mr-2">
+              示例:
+            </label>
+            <select
+              id="example-select"
+              value={selectedExample}
+              onChange={(e) => {
+                setSelectedExample(e.target.value);
+                if (e.target.value) {
+                  setCode(
+                    languageExamples[language as LanguageType][
+                      e.target
+                        .value as keyof (typeof languageExamples)[LanguageType]
+                    ]
+                  );
+                }
+              }}
+              className="border border-gray-300 rounded p-1"
+            >
+              <option value="">选择示例</option>
+              {Object.keys(
+                languageExamples[language as LanguageType] || {}
+              ).map((example) => (
+                <option key={example} value={example}>
+                  {example}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
-        <div className="flex flex-1">
-          <div className="flex flex-1 relative h-[720px]">
-            <EditorComponent
-              width="w-full"
-              height="h-full"
-              language={language}
-              value={code}
-              onChange={setCode}
-            />
+      </div>
 
-            <button
-              onClick={handleRun}
-              className="absolute top-2 right-4 bg-blue-500 text-white font-bold py-2 px-4 rounded shadow hover:bg-blue-600 z-10"
-            >
-              Run
-            </button>
-            <button
-              onClick={handleFormat}
-              className="absolute top-2 right-20 bg-green-500 text-white font-bold py-2 px-2 rounded shadow hover:bg-green-600 z-10"
-            >
-              Format
-            </button>
-          </div>
-          <ResultWindow
-            result={result}
-            onClear={handleClear}
-            width="w-1/2"
-            height="h-[720px]"
+      <div className="flex flex-1 gap-3 mb-8">
+        <div className="flex flex-1 relative">
+          <EditorComponent
+            width="w-full"
+            height="h-full"
+            language={language}
+            value={code}
+            onChange={setCode}
           />
+
+          <button
+            onClick={handleRun}
+            className="absolute top-2 right-4 bg-blue-500 text-white font-bold py-2 px-4 rounded shadow hover:bg-blue-600 z-10"
+          >
+            Run
+          </button>
+          <button
+            onClick={handleFormat}
+            className="absolute top-2 right-20 bg-green-500 text-white font-bold py-2 px-2 rounded shadow hover:bg-green-600 z-10"
+          >
+            Format
+          </button>
         </div>
+        <ResultWindow result={result} onClear={handleClear} width="w-1/2" />
       </div>
     </Layout>
   );
