@@ -1,11 +1,7 @@
-function Layout({ children }: Readonly<{ children: any }>) {
-  return (
-    <div>
-      <header></header>
-      <main>{children}</main>
-      <footer></footer>
-    </div>
-  );
-}
+import React from "react";
+
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <div className="p-4">{children}</div>;
+};
 
 export default Layout;
