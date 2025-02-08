@@ -104,11 +104,11 @@ const EditorPage: React.FC = () => {
   return (
     <Layout>
       <div className="flex items-center flex-row gap-8 w-1/2">
-        <h1 className="text-2xl font-bold p-5">编辑器</h1>
+        <h1 className="text-2xl font-bold p-5">Web3Editor</h1>
         <div className="flex gap-4">
           <div>
             <label htmlFor="language-select" className="mr-2">
-              选择语言:
+              Lanuage:
             </label>
             <select
               id="language-select"
@@ -129,7 +129,7 @@ const EditorPage: React.FC = () => {
           </div>
           <div>
             <label htmlFor="example-select" className="mr-2">
-              示例:
+              Samples:
             </label>
             <select
               id="example-select"
@@ -147,7 +147,7 @@ const EditorPage: React.FC = () => {
               }}
               className="border border-gray-300 rounded p-1"
             >
-              <option value="">选择示例</option>
+              <option value="">select</option>
               {Object.keys(
                 languageExamples[language as LanguageType] || {}
               ).map((example) => (
