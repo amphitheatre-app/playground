@@ -93,12 +93,12 @@ The Playground accepts the following props/parameters.
 
 To run the playground locally, run:
 
-- `yarn` to install dependencies
-- `yarn build` to compile the app and place it in the `build/` directory
-- `yarn start` to serve from the `build/` directory and open a page on your
+- `pnpm` to install dependencies
+- `pnpm build` to compile the app and place it in the `build/` directory
+- `pnpm start` to serve from the `build/` directory and open a page on your
   browser.
 
-For a fast edit-refresh cycle when developing run `yarn dev`. This will
+For a fast edit-refresh cycle when developing run `pnpm dev`. This will
 start an http server and automatically re-compile the TypeScript, HTML and CSS
 files whenever they change.
 
@@ -217,6 +217,13 @@ Announcement](https://github.com/amphitheatre-app/playground/issues/4).
                     <img src="https://avatars.githubusercontent.com/u/33485252?v=4" width="100;" alt="zouyuxuan"/>
                     <br />
                     <sub><b>Null</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/xiangnuans">
+                    <img src="	https://avatars.githubusercontent.com/u/24558814?v=4" width="100;" alt="xiangnuans"/>
+                    <br />
+                    <sub><b>xiangnuans</b></sub>
                 </a>
             </td>
 		</tr>
