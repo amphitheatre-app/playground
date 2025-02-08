@@ -147,6 +147,13 @@ amp run
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/xiangnuans">
+                    <img src="https://avatars.githubusercontent.com/u/24558814?v=4" width="100;" alt="xiangnuans"/>
+                    <br />
+                    <sub><b>xiangnuan</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/GrayJyy">
                     <img src="https://avatars.githubusercontent.com/u/122503129?v=4" width="100;" alt="GrayJyy"/>
                     <br />
@@ -167,6 +174,8 @@ amp run
                     <sub><b>Challenger</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/KazooTTT">
                     <img src="https://avatars.githubusercontent.com/u/31075337?v=4" width="100;" alt="KazooTTT"/>
@@ -174,8 +183,6 @@ amp run
                     <sub><b>KazooTTT</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/dethan3">
                     <img src="https://avatars.githubusercontent.com/u/33822639?v=4" width="100;" alt="dethan3"/>
