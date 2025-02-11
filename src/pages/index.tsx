@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import EditorComponent from "@/components/Editor";
 import ResultWindow from "@/components/ResultWindow";
 import { languageExamples, LanguageType } from "@/constants/languageExamples";
+import { languageColors, languageLogos } from "@/constants/languageLogos";
 import {
   DocumentTextIcon,
   PlayIcon,
@@ -10,6 +11,7 @@ import {
   DocumentDuplicateIcon,
 } from "@heroicons/react/24/outline";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import { Listbox } from "@headlessui/react";
 
 const languageOptions = [
   { value: "javascript", label: "JavaScript" },
@@ -19,6 +21,9 @@ const languageOptions = [
   { value: "go", label: "Go" },
   { value: "rust", label: "Rust" },
 ];
+
+// 添加图标尺寸常量
+const ICON_SIZE = "w-5 h-5";
 
 const EditorPage: React.FC = () => {
   const [code, setCode] = useState("// 请输入代码...");
@@ -115,27 +120,82 @@ const EditorPage: React.FC = () => {
         <div className="flex items-center flex-row gap-8 w-1/2">
           <h1 className="text-2xl font-bold p-5 text-white">Web3Editor</h1>
           <div className="flex gap-4 items-center">
-            <div className="flex items-center gap-2">
-              <CodeBracketIcon className="h-5 w-5 text-white" />
-              <select
-                id="language-select"
+            <div className="relative w-40">
+              <Listbox
                 value={language}
-                onChange={(e) => {
-                  setLanguage(e.target.value);
+                onChange={(value) => {
+                  setLanguage(value);
                   setSelectedExample("");
                   setCode("");
                 }}
-                className="rounded p-1 px-3"
               >
-                {languageOptions.map((option) => (
-                  <option key={option.value} value={option.value}>
-                    {option.label}
-                  </option>
-                ))}
-              </select>
+                <Listbox.Button className="relative w-full bg-[#1b1a1a] text-white rounded-md pl-10 pr-8 py-2 border border-gray-700 focus:outline-none focus:border-blue-500 text-left">
+                  {({ value }) => {
+                    const Logo =
+                      languageLogos[value as keyof typeof languageLogos];
+                    return (
+                      <>
+                        <div className="absolute left-3 top-1/2 -translate-y-1/2">
+                          {Logo && (
+                            <Logo
+                              className={ICON_SIZE}
+                              style={{
+                                color:
+                                  languageColors[
+                                    value as keyof typeof languageColors
+                                  ],
+                              }}
+                            />
+                          )}
+                        </div>
+                        <span>
+                          {
+                            languageOptions.find((opt) => opt.value === value)
+                              ?.label
+                          }
+                        </span>
+                        <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                          <CodeBracketIcon className={ICON_SIZE} />
+                        </div>
+                      </>
+                    );
+                  }}
+                </Listbox.Button>
+                <Listbox.Options className="absolute z-10 w-full mt-1 bg-[#1b1a1a] border border-gray-700 rounded-md shadow-lg">
+                  {languageOptions.map((option) => {
+                    const Logo =
+                      languageLogos[option.value as keyof typeof languageLogos];
+                    return (
+                      <Listbox.Option
+                        key={option.value}
+                        value={option.value}
+                        className={({ active }) =>
+                          `relative cursor-pointer select-none py-2 pl-10 pr-4 ${
+                            active ? "bg-gray-800" : ""
+                          }`
+                        }
+                      >
+                        <div className="absolute left-3 top-1/2 -translate-y-1/2">
+                          {Logo && (
+                            <Logo
+                              className={ICON_SIZE}
+                              style={{
+                                color:
+                                  languageColors[
+                                    option.value as keyof typeof languageColors
+                                  ],
+                              }}
+                            />
+                          )}
+                        </div>
+                        <span className="text-white">{option.label}</span>
+                      </Listbox.Option>
+                    );
+                  })}
+                </Listbox.Options>
+              </Listbox>
             </div>
-            <div className="flex items-center gap-2">
-              <DocumentDuplicateIcon className="h-5 w-5 text-white" />
+            <div className="relative">
               <select
                 id="example-select"
                 value={selectedExample}
@@ -150,7 +210,7 @@ const EditorPage: React.FC = () => {
                     );
                   }
                 }}
-                className=" rounded p-1 px-3"
+                className="appearance-none bg-[#1E1E1E] text-white rounded-md pl-10 pr-8 py-2 w-40 border border-gray-700 focus:outline-none focus:border-blue-500"
               >
                 <option value="">Samples</option>
                 {Object.keys(
@@ -161,6 +221,9 @@ const EditorPage: React.FC = () => {
                   </option>
                 ))}
               </select>
+              <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                <DocumentDuplicateIcon className={`${ICON_SIZE} text-white`} />
+              </div>
             </div>
           </div>
         </div>
@@ -193,7 +256,7 @@ const EditorPage: React.FC = () => {
             className="absolute top-4 right-5 bg-[#1e92f8] text-black py-2 px-3 rounded shadow hover:bg-blue-700 z-10 flex gap-2 items-center"
             title="Run Code"
           >
-            <PlayIcon className="h-5 w-5" />
+            <PlayIcon className={ICON_SIZE} />
             Run
           </button>
           <button
@@ -201,7 +264,7 @@ const EditorPage: React.FC = () => {
             className={`absolute top-4 right-32  bg-[#233341] text-white font-bold p-3 rounded-full shadow hover:bg-zinc-600 z-10`}
             title="Format Code"
           >
-            <DocumentTextIcon className="h-5 w-5" />
+            <DocumentTextIcon className={ICON_SIZE} />
           </button>
         </div>
         <ResultWindow result={result} onClear={handleClear} width="w-1/2" />
