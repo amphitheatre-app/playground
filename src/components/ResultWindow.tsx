@@ -14,12 +14,12 @@ const ResultWindow: React.FC<IResultWindowProps> = ({
 }) => {
   return (
     <div
-      className={`bg-[#FFFFFF] p-4 h-full ${width} overflow-y-auto relative`}
+      className={`bg-[#0F1419] p-4 h-full ${width} overflow-y-auto relative`}
     >
       <pre className="whitespace-pre-wrap">{result}</pre>
       <button
         onClick={onClear}
-        className="absolute top-4 right-4 bg-zinc-400 text-gray-700 font-bold p-2 rounded-full shadow hover:bg-zinc-600"
+        className="absolute top-4 right-4 bg-[#233341] text-white font-bold p-2 rounded-full shadow hover:bg-zinc-600"
         title="Clear Output"
       >
         <XMarkIcon className="h-5 w-5" />

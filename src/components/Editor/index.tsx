@@ -12,6 +12,18 @@ interface IEditorProps {
   onChange: (value: string) => void;
 }
 
+// 添加主题颜色常量
+const THEME_COLORS = {
+  "vs-dark": {
+    background: "blue",
+    text: "#D4D4D4",
+  },
+  light: {
+    background: "#FFFFFF",
+    text: "#000000",
+  },
+} as const;
+
 const EditorComponent: React.FC<IEditorProps> = ({
   width,
   height,
@@ -26,6 +38,20 @@ const EditorComponent: React.FC<IEditorProps> = ({
     editorRef.current = editor;
     monacoRef.current = monacoInstance;
 
+    // 定义自定义主题
+    monacoInstance.editor.defineTheme("custom-dark", {
+      base: "vs-dark",
+      inherit: true,
+      rules: [],
+      colors: {
+        "editor.background": "#0F1419",
+      },
+    });
+
+    // 应用自定义主题
+    monacoInstance.editor.setTheme("custom-dark");
+
+    // 注册语言支持
     if (language === "lua") {
       registerLuaLanguage(monacoInstance);
     }
@@ -37,29 +63,15 @@ const EditorComponent: React.FC<IEditorProps> = ({
     }
   };
 
-  useEffect(() => {
-    if (monacoRef.current) {
-      if (language === "lua") {
-        registerLuaLanguage(monacoRef.current);
-      }
-      if (language === "rust") {
-        registerRustLanguage(monacoRef.current);
-      }
-      if (language === "python") {
-        registerPythonLanguage(monacoRef.current);
-      }
-    }
-  }, [language]);
-
   return (
-    <div className={`bg-white ${width} ${height}`}>
+    <div className={`${width} ${height}`}>
       <Editor
         width="100%"
         height="100%"
         language={language}
         value={value}
         onChange={onChange as OnChange}
-        theme="light"
+        theme={"vs-dark"}
         options={{
           selectOnLineNumbers: true,
           automaticLayout: true,
