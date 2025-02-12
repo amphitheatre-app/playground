@@ -12,6 +12,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 import { Listbox } from "@headlessui/react";
+import toast from "react-hot-toast";
 
 const languageOptions = [
   { value: "javascript", label: "JavaScript" },
@@ -45,6 +46,7 @@ const EditorPage: React.FC = () => {
       setResult(data.result); // 假设后端返回的结果在 data.result 中
     } catch (error: any) {
       setResult("运行出错: " + error.message);
+      return toast.error(error.message);
     }
   };
 
@@ -55,7 +57,7 @@ const EditorPage: React.FC = () => {
   const handleFormat = async () => {
     console.log("格式化前代码:", code);
     if (!code) {
-      return;
+      return toast.error("Please enter code before formatting.");
     }
 
     try {
@@ -91,10 +93,10 @@ const EditorPage: React.FC = () => {
           });
           const data = await response.json();
           if (data.error) {
-            throw new Error(data.error);
+            return toast.error(data.error);
           }
           setCode(data.formattedCode);
-          return;
+          return toast.success("Code formatted successfully.");
       }
 
       const formattedCode = await prettier.default.format(code, {
@@ -108,9 +110,10 @@ const EditorPage: React.FC = () => {
       });
 
       setCode(formattedCode);
+      toast.success("Code formatted successfully.");
     } catch (error: any) {
       console.error("格式化失败:", error);
-      alert("格式化失败：" + error.message);
+      toast.error("Formatting failed.");
     }
   };
 
